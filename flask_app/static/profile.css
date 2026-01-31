@@ -1,0 +1,56 @@
+
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.profile-header h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #555;
+  font-weight: normal;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.post-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.post-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.no-posts {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 40px;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}<title>{% block title %}Home Page{% endblock %}</title>
+{% block content %}
+
+  <link rel="stylesheet" href="{{ url_for ('static', filename='index.css') }}">
+
+  <div class="posts-container">
+    <h2>All Posts</h2>
+    {% for post in posts %}
+      <div class="post-card">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <small>By {{ post.author.username }} • {{ post.timestamp|timeago }}</small>
+      </div>
+    {% else %}
+      <p class="no-posts">No posts yet. Be the first to create one!</p>
+    {% endfor %}
+  </div>
+{% endblock %}

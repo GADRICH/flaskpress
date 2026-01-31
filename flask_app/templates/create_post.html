@@ -1,0 +1,31 @@
+{% extends "base.html" %}<title>{% block title %}Create Post{% endblock %}</title>
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='create_post.css')}} ">
+
+  <div class="post-container">
+    <h2>Create a Post</h2>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+
+      <div class="form-group">
+        {{ form.title.label }}
+        {{ form.title(class="form-control") }}
+        {% for error in form.title.errors %}
+          <span class="error">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.content.label }}
+        {{ form.content(class="form-control") }}
+        {% for error in form.content.errors %}
+          <span class="error">{{ error }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        {{ form.submit(class="btn btn-primary") }}
+      </div>
+    </form>
+  </div>
+{% endblock %}

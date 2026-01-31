@@ -1,0 +1,22 @@
+{% extends "base.html" %} <title>{% block title %}Profile{% endblock %}</title>
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='profile.css')}}">
+
+  <div class="profile-container">
+    <div class="profile-header">
+      <h2>{{ user.username }}'s Profile</h2>
+      <h3>Posts by {{ user.username }}</h3>
+    </div>
+
+    {% for post in user.posts %}
+      <div class="post-card">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <small>{{ post.timestamp|timeago }}</small>
+
+      </div>
+    {% else %}
+      <p class="no-posts">This user has not written any posts yet.</p>
+    {% endfor %}
+  </div>
+{% endblock %}
