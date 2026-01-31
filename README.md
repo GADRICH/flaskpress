@@ -1,4 +1,5 @@
 📰 FlaskPress
+
 A lightweight blogging platform built with Flask, featuring secure user authentication, post creation, and timestamped entries. FlaskPress is designed to be simple, elegant, and easy to extend — perfect for learning Flask or launching a small personal blog.
 
 ✨ Features
